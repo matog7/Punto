@@ -1,0 +1,3 @@
+-- Active: 1701363876353@@127.0.0.1@3306
+CREATE DATABASE punto_game
+    DEFAULT CHARACTER SET = 'utf8mb4';

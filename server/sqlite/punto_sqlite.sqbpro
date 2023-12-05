@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/matau/OneDrive/Documents/IUT/BUT3/R5-A-10 - Nouveaux paradigmes de BDD/punto/Punto/server/sqlite/punto_sqlite.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="125"/><column_width id="3" width="2014"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,4:mainGame"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">CREATE TABLE IF NOT EXISTS Game (
+    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    nbPlayers INTEGER NOT NULL,
+    players TEXT NOT NULL , -- foreign key vers la table Player
+    create_time DATETIME
+);
+
+CREATE TABLE IF NOT EXISTS Player (
+    name VARCHAR(255) PRIMARY KEY NOT NULL,
+    roundWon INTEGER NOT NULL,
+    gameWon INTEGER NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Movements (
+    id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+    game_id INTEGER NOT NULL,
+    roundNumber INTEGER NOT NULL,
+    roundWinner VARCHAR(255) NOT NULL,
+    roundTime DATETIME,
+    FOREIGN KEY (game_id) REFERENCES Game(id)
+);
+</sql><current_tab id="0"/></tab_sql></sqlb_project>

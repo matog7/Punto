@@ -1,0 +1,112 @@
+.app {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.square-clickable{
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background-color: #ced4da;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 200ms ease-in-out;
+}
+
+.square-clickable:hover{
+  background-color: #8e9aaf;
+}
+
+.square-not-clickable{
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background-color: #6c757d;
+  border-radius: 10px;
+  cursor: none;
+}
+
+.card {
+  width: 80px;
+  height: 80px;
+  border-radius: 10px;
+  justify-content: center;
+}
+
+#Bleu{
+  background-color: blue;
+}
+
+#Vert{
+  background-color: green;
+}
+
+#Rouge{
+  background-color: red;
+}
+
+#Jaune{
+  background-color: yellow;
+}
+
+.game{
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.game-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  margin-left: 80px;
+}
+
+.board{
+  background-color: azure;
+  margin-top: 50px;
+}
+
+.carteAJouer{
+  margin-top: 10px;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
